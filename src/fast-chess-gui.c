@@ -66,6 +66,7 @@ SDL_Texture * loadImage(char * fileLocation) {
 	SDL_Surface* imgSurface = NULL;
     imgSurface = IMG_Load( fileLocation );
 
+	//check the image load. 
     if( imgSurface == NULL ) {
         printf( "Unable to load image %s! SDL Error: %s\n", fileLocation, SDL_GetError() );
         return NULL;
@@ -77,6 +78,7 @@ SDL_Texture * loadImage(char * fileLocation) {
     return dstTexture;
 }
 
+//load up the images. 
 void loadImages(void) {
 	bPawn   = loadImage("images/black_pawn.png");
 	bKnight = loadImage("images/black_knight.png");
